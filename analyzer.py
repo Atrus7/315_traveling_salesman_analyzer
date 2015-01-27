@@ -20,7 +20,7 @@ for line in f:
     given_point_order += [x,y]
 
 f.close()
-f = open('martin_output.txt', 'r')
+f = open('generated_output.txt', 'r')
 prev_x = -1
 prev_y = -1
 for line in f:
