@@ -1,8 +1,15 @@
 import random
-#change these parameters to change output
+# for CLI arguments
+import sys
+
+# defaults
 number_of_points = 1000
 max_point_value = 1000
-########################################
+
+# if we have cli arguments
+if len(sys.argv) == 3:
+  number_of_points = int(sys.argv[1])
+  max_point_value = int(sys.argv[2])
 
 # List of all possible x's and y's
 xs = list(xrange(max_point_value))
