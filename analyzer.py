@@ -36,8 +36,8 @@ for index,line in enumerate(f):
         connection.draw(win)
         #if you want to see the graph traverse more slowly, uncomment this!
         # time.sleep(1)
-        prev_x = x
-        prev_y = y
+    prev_x = x
+    prev_y = y
 
 win.getMouse() # Pause to view result
 win.close()
