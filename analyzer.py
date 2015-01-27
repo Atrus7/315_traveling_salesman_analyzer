@@ -23,7 +23,10 @@ f.close()
 f = open('generated_output.txt', 'r')
 prev_x = -1
 prev_y = -1
-for line in f:
+for index,line in enumerate(f):
+    # Don't choke on size as last line of output
+    if index == len(given_point_order)/2:
+        break
     numbers = line.split();
     pt_no = int(numbers[0]) * 2
     x = given_point_order[pt_no]
@@ -33,8 +36,8 @@ for line in f:
         connection.draw(win)
         #if you want to see the graph traverse more slowly, uncomment this!
         # time.sleep(1)
-    prev_x = x
-    prev_y = y
+        prev_x = x
+        prev_y = y
 
 win.getMouse() # Pause to view result
 win.close()
